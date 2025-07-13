@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
-import RINGS from 'vanta/dist/vanta.halo.min'; // Using HALO
+import RINGS from 'vanta/dist/vanta.halo.min';
 
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
@@ -11,11 +11,12 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const [vantaEffect, setVantaEffect] = useState<any>(null);
+  const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof RINGS> | null>(null);
   const vantaRef = useRef(null);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    let currentVantaEffect: any = null;
+    let currentVantaEffect: ReturnType<typeof RINGS> | null = null;
 
     if (vantaRef.current && !vantaEffect) {
       currentVantaEffect = RINGS({
@@ -55,7 +56,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className="bg-white dark:bg-black text-black dark:text-white relative min-h-screen">
-        {/* Vanta Background */}
         <div ref={vantaRef} className="fixed inset-0 z-0" style={{ pointerEvents: 'none' }} />
 
         <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
@@ -66,9 +66,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </NextThemesProvider>
 
-        {/* Floating Buttons: View Resume & Hire Me */}
+        {/* Floating Buttons: Hire Me */}
         <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-          {/* Hire Me */}
           <a
             href="mailto:sunilravulapati028@gmail.com"
             className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-700 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-green-500/40 transition-all duration-200 font-semibold text-lg"
