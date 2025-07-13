@@ -28,8 +28,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         minWidth: 200.0,
         backgroundColor: 0x1a202c,
         color: 0x4a90e2,
-        maxDistance: 20.0,
-        spacing: 15.0,
         THREE: THREE,
       });
       setVantaEffect(currentVantaEffect);
