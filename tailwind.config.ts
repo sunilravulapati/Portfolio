@@ -9,34 +9,39 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}', // If you are using the pages router
     './components/**/*.{js,ts,jsx,tsx,mdx}', // If you have components directly in project root
   ],
-  darkMode: 'class', // <--- THIS IS THE KEY FOR next-themes
+  darkMode: 'class', // <--- for next-themes
   theme: {
     extend: {
-      // Re-add any custom Tailwind extensions you might have had
-      // For example, the text-shadow utilities:
+      // Custom text shadows
       textShadow: {
-d
-      // For example, the text-shadow utilities:
-      textShadow: {
-        'sm': '1px 1px 2px rgba(0, 0, 0, 0.7)',
-        'md': '2px 2px 4px rgba(0, 0, 0, 0.7)',
-        'lg': '3px 3px 6px rgba(0, 0, 0, 0.7)',
-        'blue': '0 0 8px rgba(0, 170, 255, 0.5)',
+        sm: '1px 1px 2px rgba(0, 0, 0, 0.7)',
+        md: '2px 2px 4px rgba(0, 0, 0, 0.7)',
+        lg: '3px 3px 6px rgba(0, 0, 0, 0.7)',
+        blue: '0 0 8px rgba(0, 170, 255, 0.5)',
       },
     },
   },
   plugins: [
-    // Re-add any custom Tailwind plugins you might have had
-    // For example, the text-shadow plugin:
-    function({ addUtilities, theme }: { addUtilities: (utilities: Record<string, any>, variants?: string[]) => void; theme: (path: string) => any }) {
+    // Custom text-shadow plugin
+    function ({
+      addUtilities,
+      theme,
+    }: {
+      addUtilities: (
+        utilities: Record<string, any>,
+        variants?: string[]
+      ) => void;
+      theme: (path: string) => any;
+    }) {
       const newUtilities = {
-        '.text-shadow-sm': { textShadow: theme('textShadow.sm'), },
-        '.text-shadow-md': { textShadow: theme('textShadow.md'), },
-        '.text-shadow-lg': { textShadow: theme('textShadow.lg'), },
-        '.text-shadow-blue': { textShadow: theme('textShadow.blue'), },
+        '.text-shadow-sm': { textShadow: theme('textShadow.sm') },
+        '.text-shadow-md': { textShadow: theme('textShadow.md') },
+        '.text-shadow-lg': { textShadow: theme('textShadow.lg') },
+        '.text-shadow-blue': { textShadow: theme('textShadow.blue') },
       };
       addUtilities(newUtilities, ['responsive', 'hover']);
-    }
+    },
   ],
 };
+
 export default config;
