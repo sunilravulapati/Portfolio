@@ -15,6 +15,9 @@ const config: Config = {
       // Re-add any custom Tailwind extensions you might have had
       // For example, the text-shadow utilities:
       textShadow: {
+d
+      // For example, the text-shadow utilities:
+      textShadow: {
         'sm': '1px 1px 2px rgba(0, 0, 0, 0.7)',
         'md': '2px 2px 4px rgba(0, 0, 0, 0.7)',
         'lg': '3px 3px 6px rgba(0, 0, 0, 0.7)',

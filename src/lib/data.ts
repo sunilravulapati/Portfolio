@@ -1,4 +1,5 @@
-// Skills list
+import { desc } from "framer-motion/client";
+
 export const skills = [
   {
     category: 'Languages',
@@ -10,7 +11,7 @@ export const skills = [
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'Express.js', 'Flask', 'Django', 'Firebase', 'MongoDB'],
+    items: ['Node.js', 'Express.js', 'Flask', 'Django', 'FastAPI', 'Firebase', 'MongoDB', 'NextAuth.js'],
   },
   {
     category: 'Tools & Platforms',
@@ -18,9 +19,23 @@ export const skills = [
   },
 ];
 
-
-// Projects list
 export const projects = [
+  {
+    title: 'PrepGenie - Tech Interview Helper',
+    description:
+      'A web app that generates personalized interview prep material, coding challenges, and progress tracking to help students practice effectively.',
+    stack: ['Next.js', 'Tailwind CSS', 'OpenAI API', 'MongoDB'],
+    demo: 'https://prep-genie-one.vercel.app/',
+    code: 'https://github.com/sunilravulapati/PrepGenie',
+  },
+  {
+    title: 'Urban Ally - Google Maps Submission',
+    description:
+      'Nominated project for the Google Maps Platform Awards (earlier named NavSecure). Provides optimized routes, nearby services, accessibility features, and real-time navigation with Firebase backend.',
+    stack: ['React', 'Vite', 'Firebase', 'Google Maps API'],
+    demo: 'https://urban-ally.vercel.app/',
+    code: 'https://github.com/sunilravulapati/Urban-Ally',
+  },
   {
     title: 'TrendWise - AI Blog Generator',
     description:
@@ -37,13 +52,13 @@ export const projects = [
     code: 'https://github.com/sunilravulapati/Bad-Posture-Detection',
   },
   {
-  title: 'FeedScope – Multilingual Feedback Analyzer',
-  description:
-    'Built an AI-based multilingual feedback analyzer to extract sentiments, issues, and trends from customer reviews without using LLMs. Designed with Streamlit frontend and custom-trained models for language detection and sentiment classification.',
-  stack: ['Python', 'Streamlit', 'Scikit-learn', 'Pandas', 'Matplotlib'],
-  demo: 'https://drive.google.com/file/d/1lcCKkNEA_R4qSRTsx09kvjcfoo9fqgmY/view?usp=sharing', // Add demo if deployed or shared as video
-  code: 'https://github.com/sunilravulapati/Multi-Lingual-Customer-Feedback',
-},
+    title: 'FeedScope – Multilingual Feedback Analyzer',
+    description:
+      'Built an AI-based multilingual feedback analyzer to extract sentiments, issues, and trends from customer reviews without using LLMs. Designed with Streamlit frontend and custom-trained models for language detection and sentiment classification.',
+    stack: ['Python', 'Streamlit', 'Scikit-learn', 'Pandas', 'Matplotlib'],
+    demo: 'https://drive.google.com/file/d/1lcCKkNEA_R4qSRTsx09kvjcfoo9fqgmY/view?usp=sharing',
+    code: 'https://github.com/sunilravulapati/Multi-Lingual-Customer-Feedback',
+  },
   {
     title: 'AI Flashcard App',
     description:
@@ -52,8 +67,9 @@ export const projects = [
     code: 'https://github.com/sunilravulapati/AI-FLASH-CARD',
   },
   {
-  title: 'Endurosync - Productivity Tracker',
-    description: 'All-in-one daily productivity tracker with AI assistant, heatmaps, streaks, journal, and motivational tasks.',
+    title: 'Endurosync - Productivity Tracker',
+    description:
+      'All-in-one daily productivity tracker with AI assistant, heatmaps, streaks, journal, and motivational tasks.',
     stack: ['React', 'Node.js', 'MongoDB', 'OpenAI API'],
     demo: 'https://drive.google.com/file/d/1KS0FeHOF1eeoNxkm_pgTywIWfGB4Y2ig/view?usp=sharing',
     code: 'https://github.com/sunilravulapati/Endurosync',

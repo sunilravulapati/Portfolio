@@ -28,8 +28,9 @@ export default function About() {
           <p className="text-lg leading-relaxed">
             I&rsquo;m passionate about <span className="font-semibold text-pink-400">problem-solving</span> and have a strong
             foundation in <span className="font-semibold">Data Structures and Algorithms</span>. I&rsquo;ve solved{' '}
-            <span className="font-bold text-green-400">260+ problems on LeetCode</span> and ranked in the{' '}
-            <span className="font-bold">top 450k globally</span>.
+            <span className="font-bold text-green-400">330+ problems on LeetCode</span>, ranked in the{' '}
+            <span className="font-bold">top 330k globally</span>, and achieved a{' '}
+            <span className="font-bold text-blue-400">contest rating of 1507</span>.
           </p>
 
           <p className="text-lg leading-relaxed">

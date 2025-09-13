@@ -20,14 +20,15 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/**/*.d.ts" // <--- ADD OR ENSURE THIS LINE IS PRESENT
+    "src/**/*.d.ts"
   ],
   "exclude": ["node_modules"]
 }
