@@ -1,77 +1,69 @@
-import { desc } from "framer-motion/client";
-
 export const skills = [
   {
     category: 'Languages',
-    items: ['C', 'C++', 'Python', 'Java', 'JavaScript', 'TypeScript'],
+    items: ['Java', 'C++', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'C'], // Moved Java & C++ up [cite: 43]
   },
   {
     category: 'Frontend',
-    items: ['React.js', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS', 'Framer Motion'],
+    items: ['Next.js', 'React.js', 'Tailwind CSS', 'Framer Motion', 'Recharts', 'Three.js'], // Added Recharts [cite: 44]
   },
   {
-    category: 'Backend',
-    items: ['Node.js', 'Express.js', 'Flask', 'Django', 'FastAPI', 'Firebase', 'MongoDB', 'NextAuth.js'],
+    category: 'Backend & Security', // Renamed for better impact
+    items: ['Node.js', 'Express.js', 'FastAPI', 'MongoDB', 'PostgreSQL', 'Firebase', 'NextAuth.js', 'Ollama'], // Added Ollama [cite: 45]
   },
   {
-    category: 'Tools & Platforms',
-    items: ['Git', 'GitHub', 'Vercel', 'Render', 'Postman', 'VS Code', 'Figma'],
+    category: 'Cloud & Tools',
+    items: ['AWS (Certified Foundations)', 'Git', 'Docker', 'Vercel', 'Postman', 'MediaPipe', 'OpenCV'], // Added AWS
   },
 ];
 
 export const projects = [
   {
-    title: 'PrepGenie - Tech Interview Helper',
+    title: 'Aegis AI - Full-Stack SOC Dashboard',
     description:
-      'A web app that generates personalized interview prep material, coding challenges, and progress tracking to help students practice effectively.',
+      'A comprehensive Security Operations Center (SOC) dashboard designed for real-time threat monitoring and system health visualization using the MERN stack.',
+    stack: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'JWT'],
+    demo: 'https://aegis-ai-sandy.vercel.app/',
+    code: 'https://github.com/sunilravulapati/Aegis-AI',
+  },
+  {
+    title: 'ProsperOS - Personal Finance OS',
+    description:
+      'A privacy-first financial operating system integrating local LLMs (Llama 3) for secure investment strategies, Net Worth tracking, and debt analysis.',
+    stack: ['React', 'Recharts', 'Ollama', 'Tailwind CSS', 'Local LLM'],
+    demo: 'https://smart-spending-ai.vercel.app/',
+    code: 'https://github.com/sunilravulapati/ProsperOS', // Ensure this repo name matches yours [cite: 19]
+  },
+  {
+    title: 'Urban Ally - Google Maps Platform Nominee',
+    description:
+      'Award-nominated navigation platform focusing on urban accessibility. Built for the Google Maps Platform Challenge to provide real-time, inclusive routing.',
+    stack: ['React', 'Firebase', 'Google Maps API', 'Vite'],
+    demo: 'https://urban-ally.vercel.app/',
+    code: 'https://github.com/sunilravulapati/Urban-Ally',
+  },
+  {
+    title: 'PrepGenie - Tech Interview Platform',
+    description:
+      'An AI-powered preparation suite that generates custom coding challenges and interview materials based on specific job descriptions.',
     stack: ['Next.js', 'Tailwind CSS', 'OpenAI API', 'MongoDB'],
     demo: 'https://prep-genie-one.vercel.app/',
     code: 'https://github.com/sunilravulapati/PrepGenie',
   },
   {
-    title: 'Urban Ally - Google Maps Submission',
+    title: 'PostureTrack - Real-Time AI Detection',
     description:
-      'Nominated project for the Google Maps Platform Awards (earlier named NavSecure). Provides optimized routes, nearby services, accessibility features, and real-time navigation with Firebase backend.',
-    stack: ['React', 'Vite', 'Firebase', 'Google Maps API'],
-    demo: 'https://urban-ally.vercel.app/',
-    code: 'https://github.com/sunilravulapati/Urban-Ally',
-  },
-  {
-    title: 'TrendWise - AI Blog Generator',
-    description:
-      'A full-stack SEO-optimized blog platform using Next.js, OpenAI, and MongoDB. Includes trending topic crawler, blog writer, authentication, and commenting.',
-    stack: ['Next.js', 'Tailwind CSS', 'MongoDB', 'OpenAI API', 'NextAuth.js'],
-    code: 'https://github.com/sunilravulapati/TrendWise',
-  },
-  {
-    title: 'PostureTrack - Real-Time AI Posture Detection',
-    description:
-      'A full-stack app using MediaPipe and FastAPI to analyze posture via webcam or video upload with frame-by-frame feedback or AI summary.',
+      'Advanced computer vision application using MediaPipe and FastAPI to analyze and correct body posture via real-time webcam streaming.',
     stack: ['React', 'FastAPI', 'MediaPipe', 'Framer Motion'],
     demo: 'https://new-posture-frontend.onrender.com/',
     code: 'https://github.com/sunilravulapati/Bad-Posture-Detection',
   },
   {
-    title: 'FeedScope – Multilingual Feedback Analyzer',
+    title: 'SR Sports - Headless E-Commerce',
     description:
-      'Built an AI-based multilingual feedback analyzer to extract sentiments, issues, and trends from customer reviews without using LLMs. Designed with Streamlit frontend and custom-trained models for language detection and sentiment classification.',
-    stack: ['Python', 'Streamlit', 'Scikit-learn', 'Pandas', 'Matplotlib'],
-    demo: 'https://drive.google.com/file/d/1lcCKkNEA_R4qSRTsx09kvjcfoo9fqgmY/view?usp=sharing',
-    code: 'https://github.com/sunilravulapati/Multi-Lingual-Customer-Feedback',
-  },
-  {
-    title: 'AI Flashcard App',
-    description:
-      'Python-based app that generates flashcards from text using OpenAI and Flask. Includes interactive UI and learning progress tracker.',
-    stack: ['Python', 'Flask', 'JavaScript', 'OpenAI'],
-    code: 'https://github.com/sunilravulapati/AI-FLASH-CARD',
-  },
-  {
-    title: 'Endurosync - Productivity Tracker',
-    description:
-      'All-in-one daily productivity tracker with AI assistant, heatmaps, streaks, journal, and motivational tasks.',
-    stack: ['React', 'Node.js', 'MongoDB', 'OpenAI API'],
-    demo: 'https://drive.google.com/file/d/1KS0FeHOF1eeoNxkm_pgTywIWfGB4Y2ig/view?usp=sharing',
-    code: 'https://github.com/sunilravulapati/Endurosync',
+      'Production-ready e-commerce platform for a cricket sports business. Features headless CMS architecture and optimized Core Web Vitals (95+ Lighthouse).',
+    stack: ['Next.js', 'Sanity CMS', 'Tailwind CSS', 'Vercel'],
+    demo: 'https://sr-sports-official.vercel.app/',
+    code: 'https://github.com/sunilravulapati/SR-Sports',
   },
 ];
